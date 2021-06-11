@@ -115,6 +115,7 @@ GEM
       jekyll (>= 3.6, < 5.0)
 
 PLATFORMS
+  ruby
   x86_64-linux
 
 DEPENDENCIES

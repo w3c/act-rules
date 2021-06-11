@@ -36,27 +36,34 @@ ytkey: AIzaSyCiZ9uToWu9jb7BTx47NtzCvmGGXKXp8nI
 remote_theme: w3c/wai-website-theme
 
 collections:
-#  business-case:
-#    area: "Plan & Manage"
-#    name: "Business Case"
-#    shortname: "Business Case"
-#    icon: "book" # TODO
-#    repostitory: w3c/wai-bcase
-#    output: true
-#    acknowledgements: false
-#    permalink: /:collection/:path/
+  patterns:
+    title: Glossary
+    permalink: /:collection/:name/
+    output: true
 
 defaults:
   -
     scope:
       path: ""
     values:
-      layout: "default"
-#  -
-#    scope:
-#      path: "_business-case"
-#    values:
-#      layout: "sidenav"
+      layout: standalone_resource
+      license: creative-commons   # NEW: delete if not creative-commons
+      feedbackmail: wai@w3.org  # NEW: delete this line if it’s an EOWG resource (the default is wai-eo-editors@w3.org)
+      footer: >   # Translate words below, including "Date:" and "Editor:" Translate the Working Group name. Leave the Working Group acronym in English. Do *not* change the dates in the footer below.
+        <p><strong>Date:</strong> Updated @@ Month 2021. First published Month 20@@.</p>
+        <p><strong>Editors:</strong> @@name, @@name. <strong>Contributors:</strong> @@name, @@name, and <a href="https://www.w3.org/groups/wg/@@wg/participants">participants of the @@WG</a>. ACKNOWLEDGEMENTS lists contributors and credits.</p>
+        <p>Developed by the @@ Working Group (<a href="http://www.w3.org/WAI/@@/">@@WG</a>). Developed as part of the <a href="https://www.w3.org/WAI/@@/">WAI-@@ project</a>, @@co-funded by the European Commission.</p>
+      type_of_guidance: "Test Rule"
+      rule_meta:
+        rule_type: "atomic rule"
+
+standalone_resource_nav_links:
+  - name: All Rules
+    ref: /standards-guidelines/act/rules/
+  - name: About Rules
+    ref: /standards-guidelines/act/rules/about/
+standalone_resource_doc_name: "WCAG 2: ACT Rules"
+
 
 plugins:
   - jekyll-seo-tag
